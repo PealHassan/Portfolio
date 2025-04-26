@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD. Peal Hassan - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Custom hover animation for cards */
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 165, 255, 0.2);
+    }
+    .profile-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 165, 255, 0.2);
+    }
+    .contest-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contest-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 165, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-400">MD. Peal Hassan</h1>
+      <div class="space-x-4">
+        <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
+        <a href="#education" class="text-gray-300 hover:text-blue-400 transition-colors">Education</a>
+        <a href="#competitive-profiles" class="text-gray-300 hover:text-blue-400 transition-colors">Competitive Profiles</a>
+        <a href="#contest-participation" class="text-gray-300 hover:text-blue-400 transition-colors">Contest Participation</a>
+        <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#achievements" class="text-gray-300 hover:text-blue-400 transition-colors">Achievements</a>
+        <a href="#projects" class="text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 pt-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Text on the left -->
+        <div class="md:w-1/2 text-left">
+          <p class="text-lg">
+            I'm MD. Peal Hassan, a passionate Computer Science & Engineering student at Shahjalal University of Science and Technology. With a strong foundation in competitive programming and web/mobile development, I thrive on solving complex problems and building innovative projects. My expertise spans multiple programming languages and technologies, and I'm always eager to learn and take on new challenges.
+          </p>
+        </div>
+        <!-- Image on the right -->
+        <div class="md:w-1/2 flex justify-center">
+          <img 
+            src="images/profile.jpg" 
+            alt="Peal Hassan Profile Picture" 
+            class="w-50 h-50 rounded-full border-1 border-blue-400 object-cover"
+            <!-- Replace 'images/profile.jpg' with the actual path to your image file -->
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Education</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold text-white">Shahjalal University of Science and Technology, Sylhet</h3>
+          <p class="text-gray-400">Bachelor of Science in Computer Science & Engineering</p>
+          <p class="text-gray-400">February 2020 - June 2025 | CGPA: 3.70</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-white">Notre Dame College, Dhaka</h3>
+          <p class="text-gray-400">Higher Secondary Certificate (HSC)</p>
+          <p class="text-gray-400">July 2017 - June 2019 | GPA: 5.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- Competitive Programming Profiles Section -->
+   <section id="competitive-profiles" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">Competitive Programming Profiles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Codeforces Card -->
+        <div class="bg-gray-800 p-6 rounded-lg profile-card border border-blue-400">
+          <h3 class="text-xl font-semibold text-white mb-2">Codeforces: PealHassan</h3>
+          <p class="text-gray-300">
+            Rank: <span class="text-purple-400 font-medium">Expert</span>
+          </p>
+          <p class="text-gray-300">
+            Total Solved: <span class="text-blue-400 font-medium">2000+</span>
+          </p>
+          <p class="text-gray-300">
+            Contests: <span class="text-blue-400 font-medium">~100</span>
+          </p>
+          <p class="text-gray-300">
+            Best Rank: <span class="text-blue-400 font-medium">Global Rank 350</span> (DIV 3, 2023)
+          </p>
+          <a 
+            href="https://codeforces.com/profile/PealHassan" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-block mt-4 px-4 py-2 bg-blue-400 text-gray-900 font-semibold rounded-lg hover:bg-blue-500 transition-colors"
+          >
+            Visit Profile
+          </a>
+        </div>
+        <!-- CodeChef Card -->
+        <div class="bg-gray-800 p-6 rounded-lg profile-card border border-blue-400">
+          <h3 class="text-xl font-semibold text-white mb-2">CodeChef: peal45</h3>
+          <p class="text-gray-300">
+            Rank: <span class="text-purple-400 font-medium">5* Coder</span>
+          </p>
+          <p class="text-gray-300">
+            Total Solved: <span class="text-blue-400 font-medium">264</span>
+          </p>
+          <p class="text-gray-300">
+            Contests: <span class="text-blue-400 font-medium">~50</span>
+          </p>
+          <p class="text-gray-300">
+            Best Rank: <span class="text-blue-400 font-medium">Global Rank 24</span> (DIV 2, 2024)
+          </p>
+          <a 
+            href="https://www.codechef.com/users/peal45" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-block mt-4 px-4 py-2 bg-blue-400 text-gray-900 font-semibold rounded-lg hover:bg-blue-500 transition-colors"
+          >
+            Visit Profile
+          </a>
+        </div>
+        <!-- AtCoder Card -->
+        <div class="bg-gray-800 p-6 rounded-lg profile-card border border-blue-400">
+          <h3 class="text-xl font-semibold text-white mb-2">AtCoder: PealHassan</h3>
+          <p class="text-gray-300">
+            Rank: <span class="text-purple-400 font-medium">5 Kyu</span>
+          </p>
+          <p class="text-gray-300">
+            Total Solved: <span class="text-blue-400 font-medium">535</span>
+          </p>
+          <p class="text-gray-300">
+            Contests: <span class="text-blue-400 font-medium">~40</span>
+          </p>
+          <p class="text-gray-300">
+            Max Rating: <span class="text-blue-400 font-medium">1197</span>
+          </p>
+          <a 
+            href="https://atcoder.jp/users/PealHassan" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-block mt-4 px-4 py-2 bg-blue-400 text-gray-900 font-semibold rounded-lg hover:bg-blue-500 transition-colors"
+          >
+            Visit Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contest Participation Section -->
+  <section id="contest-participation" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8 text-center">Contest Participation</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- ICPC Participation Card -->
+        <div class="bg-gray-800 p-8 rounded-lg contest-card border border-blue-400 max-w-lg mx-auto">
+          <h3 class="text-xl font-semibold text-white mb-4">ICPC Contests</h3>
+          <h4 class="text-lg font-medium text-gray-300 mb-2">Onsite Contests</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">
+            <li>
+              17th in ICPC Asia Dhaka Regional Contest 2024, DIU (SUST_UpsideDown) - 
+              <a href="#" class="inline-block ml-2 px-3 py-1 bg-blue-400 text-gray-900 text-sm font-semibold rounded hover:bg-blue-500 transition-colors">
+                Standings
+              </a>
+              <!-- Replace '#' with the actual standings link if available -->
+            </li>
+            <li>
+              27th in ICPC Asia Dhaka Preliminary Regional Contest 2024, DIU (SUST_UpsideDown) - 
+              <a href="#" class="inline-block ml-2 px-3 py-1 bg-blue-400 text-gray-900 text-sm font-semibold rounded hover:bg-blue-500 transition-colors">
+                Standings
+              </a>
+              <!-- Replace '#' with the actual standings link if available -->
+            </li>
+          </ul>
+          <h4 class="text-lg font-medium text-gray-300 mb-2">Preliminary Contests (Online)</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Ranked 97th in ICPC Preliminary Contest 2023</li>
+            <li>Ranked 102nd in ICPC Preliminary Contest 2022</li>
+            <li>Ranked 177th in ICPC Preliminary Contest 2021</li>
+            <li>Ranked 192nd in ICPC Preliminary Contest 2020</li>
+          </ul>
+        </div>
+        <!-- IUPC Participation Card -->
+        <div class="bg-gray-800 p-8 rounded-lg contest-card border border-blue-400 max-w-lg mx-auto">
+          <h3 class="text-xl font-semibold text-white mb-4">IUPC Contests</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>
+              46th in Kite Games SUST IUPC 2024 (SUST Oporanho) - 
+              <a href="https://toph.co/c/kite-games-sust-iupc-2024/standings" target="_blank" rel="noopener noreferrer" class="inline-block ml-2 px-3 py-1 bg-blue-400 text-gray-900 text-sm font-semibold rounded hover:bg-blue-500 transition-colors">
+                Standings
+              </a>
+            </li>
+            <li>
+              47th in CEFALO SUST IUPC 2023 (SUST Divergence) - 
+              <a href="https://toph.co/c/cefalo-sust-iupc-2023/standings" target="_blank" rel="noopener noreferrer" class="inline-block ml-2 px-3 py-1 bg-blue-400 text-gray-900 text-sm font-semibold rounded hover:bg-blue-500 transition-colors">
+                Standings
+              </a>
+            </li>
+            <li>
+              107th in UIU IUPC 2025 (SUST S.P.S) - 
+              <a href="#" class="inline-block ml-2 px-3 py-1 bg-blue-400 text-gray-900 text-sm font-semibold rounded hover:bg-blue-500 transition-colors">
+                Standings
+              </a>
+              <!-- Replace '#' with the actual standings link if available -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Technical Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h3 class="text-lg font-semibold text-white">Languages</h3>
+          <p class="text-gray-300">C/C++, Python, SQL, Dart, Java, JavaScript</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white">Tools/Technologies</h3>
+          <p class="text-gray-300">Git, GitHub, CSS, Bootstrap</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white">Databases</h3>
+          <p class="text-gray-300">MySQL, MongoDB, PostgreSQL</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white">Coursework</h3>
+          <p class="text-gray-300">Data Structures, Algorithms, OOP, Operating Systems, DBMS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Achievements</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-300">
+        <li>Solved over 3500+ problems across competitive programming platforms.</li>
+        <li>Codeforces Expert (Max Rating: 1681) with 2000+ problems solved.</li>
+        <li>CodeChef 5* Coder (Max Rating: 2043) with 264 problems solved.</li>
+        <li>AtCoder 5 Kyu (Max Rating: 1197) with 535 problems solved.</li>
+        <li>17th in ICPC Asia Dhaka Regional Contest 2024 (SUST_UpsideDown).</li>
+        <li>27th in ICPC Asia Dhaka Preliminary Regional Contest 2024.</li>
+        <li>Global Rank 350 in Codeforces Round DIV 3, 2023 (21.5k+ participants).</li>
+        <li>Global Rank 24 in Codechef Round DIV 2, 2024 (2k+ participants).</li>
+        <li>Global Rank 77 in Codechef Round DIV 1, 2024 (200+ participants).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">RxHub</h3>
+          <p class="text-gray-400 text-sm">Jul 2024 - Sep 2024</p>
+          <p class="text-gray-300 mt-2">A prescription management and appointment scheduling web app using React, MongoDB, and Spring Boot, featuring AI to assist doctors.</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+            <a href="#" class="text-blue-400 hover:underline">Demo Video</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">Hotel Management System</h3>
+          <p class="text-gray-400 text-sm">May 2024 - Jun 2024</p>
+          <p class="text-gray-300 mt-2">A MERN-based system for hotel admin and management panels.</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">BMI Calculator App Clone</h3>
+          <p class="text-gray-400 text-sm">May 2024 - May 2024</p>
+          <p class="text-gray-300 mt-2">A Flutter application to calculate BMI, replicating the look and feel of an existing app.</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">IntelliAssist</h3>
+          <p class="text-gray-400 text-sm">Dec 2023 - Apr 2024</p>
+          <p class="text-gray-300 mt-2">A chatbot for SUST information, built with Flutter, Dialogflow, and Firebase (Academic project).</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+            <a href="#" class="text-blue-400 hover:underline">Demo Video</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">Smart Bondhu</h3>
+          <p class="text-gray-400 text-sm">Oct 2023 - Nov 2023</p>
+          <p class="text-gray-300 mt-2">An Android app for family planning methods, developed for a private health consultancy using Flutter (Paid project).</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">HemoLife</h3>
+          <p class="text-gray-400 text-sm">Jul 2023 - Aug 2023</p>
+          <p class="text-gray-300 mt-2">A blood donation management Android app using Flutter and PostgreSQL (Academic project).</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">Online Course Management System</h3>
+          <p class="text-gray-400 text-sm">Apr 2023 - May 2023</p>
+          <p class="text-gray-300 mt-2">A web-based course management system using Java Servlets and JavaScript (Academic project).</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+          </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg project-card">
+          <h3 class="text-xl font-semibold text-white">ProKash</h3>
+          <p class="text-gray-400 text-sm">Jul 2022 - Aug 2022</p>
+          <p class="text-gray-300 mt-2">A bank management desktop application using Java and JavaFX (Academic project).</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-blue-400 hover:underline">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-blue-400 mb-8">Contact</h2>
+      <p class="text-lg">Email: <a href="mailto:pealhasan6@gmail.com" class="text-blue-400 hover:underline">pealhasan6@gmail.com</a></p>
+      <p class="text-lg">Phone: +8801779224826</p>
+      <p class="text-lg">GitHub: <a href="https://github.com/pealhassan" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">pealhassan</a></p>
+      <p class="text-lg">Location: Dhaka, Bangladesh</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-4 text-center text-gray-400">
+    <p>© 2025 Peal Hassan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add active class to nav links on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+      let current = '';
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove('text-blue-400');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('text-blue-400');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
