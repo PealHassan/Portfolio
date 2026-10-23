@@ -449,6 +449,60 @@
             .project-card:hover, .card:hover { transform: translateY(-3px); }
         }
 
+    
+        /* Professional portfolio refresh */
+        :root { color-scheme: dark; --page: #0b1120; --panel: #111b2e; --line: rgba(148,163,184,.18); --muted: #9aa9bf; --text: #e7edf6; --accent: #70a5ff; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+        body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--page); color: var(--text); line-height: 1.7; }
+        .navbar { background: rgba(11,17,32,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); padding-top: .9rem; padding-bottom: .9rem; }
+        .navbar .container { max-width: 1180px; }
+        .navbar h1 { font-size: 1rem; letter-spacing: -.02em; }
+        .navbar ul { align-items: center; gap: 1.1rem; }
+        .nav-link { color: #c4cede !important; font-size: .86rem; transition: color .2s ease; }
+        .nav-link:hover { color: var(--accent) !important; }
+        .section-title { font-size: clamp(2rem, 4vw, 2.7rem); letter-spacing: -.045em; line-height: 1.15; text-transform: none; margin: .25rem 0 2rem; }
+        .section-title::after { width: 3rem; height: 3px; margin-top: .9rem; background: var(--accent); }
+        .container { max-width: 1180px; }
+        section:not(#home) { padding-top: 5.5rem; padding-bottom: 5.5rem; border-top: 1px solid rgba(148,163,184,.09); }
+        .section-kicker, .hero-eyebrow { color: var(--accent); font-size: .76rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+        #home { min-height: 590px; display: flex; align-items: center; background: radial-gradient(ellipse at 82% 25%, rgba(59,130,246,.17), transparent 34%), linear-gradient(135deg,#0b1120 0%,#111d33 65%,#0b1120 100%); padding-top: 8rem; padding-bottom: 7rem; }
+        #home::before { display: none; }
+        #home .container { max-width: 1180px; }
+        .hero-grid { position:absolute; inset:0; opacity:.16; background-image:linear-gradient(rgba(148,163,184,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.14) 1px,transparent 1px); background-size:48px 48px; mask-image:linear-gradient(to right,transparent,black); pointer-events:none; }
+        .hero-title { font-size: clamp(3rem, 7vw, 5.6rem); font-weight: 750; letter-spacing: -.065em; line-height: 1.05; margin: 1rem 0 1.3rem; color:#f8fafc; }
+        .hero-subtitle { max-width: 700px; color:#bdc9dc; font-size: clamp(1.05rem,2vw,1.35rem); line-height:1.65; margin-bottom:2rem; }
+        .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.8rem; }
+        .primary-action,.secondary-action { display:inline-flex; align-items:center; border-radius:.55rem; padding:.78rem 1.1rem; font-weight:650; font-size:.9rem; transition:transform .2s ease,background .2s ease; }
+        .primary-action { color:#08111f; background:var(--accent); }
+        .primary-action:hover { background:#9fc2ff; transform:translateY(-2px); }
+        .secondary-action { color:#e7edf6; border:1px solid rgba(148,163,184,.35); }
+        .secondary-action:hover { background:rgba(148,163,184,.1); }
+        .hero-stack { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:2.2rem; }
+        .hero-stack span,.tech-tags span { border:1px solid rgba(112,165,255,.24); background:rgba(112,165,255,.07); border-radius:999px; padding:.3rem .7rem; color:#c6d8f6; font-size:.78rem; }
+        #about .section-title { margin-bottom:2.25rem; }
+        .about-layout { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(270px,.8fr); gap:3rem; align-items:start; }
+        .about-copy p { color:#b8c4d6; margin-bottom:1.15rem; }
+        .about-copy .about-lead { color:#f0f5fc; font-size:1.25rem; font-weight:550; line-height:1.65; }
+        .about-copy strong { color:#eaf1fc; }
+        .about-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; padding-top:1rem; }
+        .about-facts > div { border-left:2px solid var(--accent); padding-left:.8rem; }
+        .fact-label { display:block; color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.2rem; }
+        .about-facts strong { font-size:.88rem; }
+        .stack-panel { background:linear-gradient(145deg,rgba(17,27,46,.96),rgba(15,23,42,.82)); border:1px solid var(--line); border-radius:1rem; padding:1.5rem; }
+        .stack-panel h3 { font-size:1.05rem; font-weight:700; margin-bottom:1.4rem; }
+        .stack-category { color:var(--muted); font-size:.76rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; margin:.95rem 0 .55rem; }
+        .tech-tags { display:flex; flex-wrap:wrap; gap:.45rem; }
+        .stack-note { color:#8493a9; font-size:.75rem; margin-top:1.4rem; }
+        .card,.project-card,.about-card,.education-card { background:var(--panel); border:1px solid var(--line); box-shadow:0 12px 30px rgba(0,0,0,.12); border-radius:1rem; }
+        .card:hover,.project-card:hover { transform:translateY(-4px); box-shadow:0 18px 38px rgba(0,0,0,.22); }
+        .experience-date { color:#bcd5ff; background:rgba(112,165,255,.12); }
+        .education-card { padding:1.5rem; }
+        a { transition:color .2s ease; }
+        a:focus-visible,button:focus-visible { outline:3px solid #93c5fd; outline-offset:4px; }
+        @media(max-width:850px) { .navbar ul { gap:.7rem; } .nav-link { font-size:.78rem; } .about-layout { grid-template-columns:1fr; gap:1.75rem; } }
+        @media(max-width:767px) { .navbar .container { align-items:center; } #home { min-height:520px; padding-top:6rem; padding-bottom:5rem; } .hero-title { font-size:clamp(2.8rem,12vw,4rem); } .about-facts { grid-template-columns:1fr; gap:.8rem; } section:not(#home) { padding-top:4rem; padding-bottom:4rem; } .section-title { margin-bottom:1.5rem; } }
+        @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+
     </style>
 </head>
 <body>
@@ -460,14 +514,8 @@
                 <ul class="hidden md:flex space-x-6">
                     <li><a href="#home" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Home</a></li>
                     <li><a href="#about" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">About</a></li>
-                <li><a href="#experience" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Experience</a></li>
-                <li><a href="#education" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Education</a></li>
                     <li><a href="#experience" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Experience</a></li>
-                    <li><a href="#education" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Education</a></li>
                     <li><a href="#projects" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Projects</a></li>
-                    <li><a href="#competitive" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Competitive Programming</a></li>
-                    <li><a href="#contests" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Contests</a></li>
-                    <li><a href="#datathons" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Datathons</a></li>
                     <li><a href="#publications" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Publications</a></li>
                     <li><a href="#contact" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Contact</a></li>
                 </ul>
@@ -486,10 +534,8 @@
             <ul class="flex flex-col space-y-4 px-6">
                 <li><a href="#home" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Home</a></li>
                 <li><a href="#about" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">About</a></li>
+                <li><a href="#experience" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Experience</a></li>
                 <li><a href="#projects" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Projects</a></li>
-                <li><a href="#competitive" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Competitive Programming</a></li>
-                <li><a href="#contests" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Contests</a></li>
-                <li><a href="#datathons" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Datathons</a></li>
                 <li><a href="#publications" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Publications</a></li>
                 <li><a href="#contact" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Contact</a></li>
             </ul>
@@ -497,57 +543,48 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home"
-        class="py-32 parallax relative overflow-hidden"
-        style="background-image: url('https://images.unsplash.com/photo-1536859355448-76f92ebdc33d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY0fHxjb2Rpbmd8ZW58MHx8MHx8fDA%3D'); background-size: cover; background-position: center; background-repeat: no-repeat;"
-        data-aos="fade-up" data-aos-duration="1000">
-        
-        <div class="container text-center relative z-10">
-            <h1 class="section-title text-5xl md:text-6xl font-bold text-white mb-4"
-                data-aos="zoom-in" data-aos-delay="200">
-                MD. Peal Hassan
-            </h1>
-            <p class="text-xl md:text-2xl text-white mb-6"
-                data-aos="zoom-in" data-aos-delay="300">
-                Competitive Programmer | Software Developer | Innovator
-            </p>
+    <section id="home" class="py-32 relative overflow-hidden" data-aos="fade-up">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container text-left relative z-10">
+            <p class="hero-eyebrow">SOFTWARE ENGINEER · DHAKA, BANGLADESH</p>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">MD. Peal Hassan</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="180">I build reliable web applications with .NET, C#, Blazor, React and TypeScript.</p>
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+                <a href="#experience" class="primary-action">Explore my experience <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
+                <a href="#projects" class="secondary-action">View projects</a>
+            </div>
+            <div class="hero-stack" aria-label="Core technologies"><span>.NET / C#</span><span>Blazor Server</span><span>React</span><span>TypeScript</span></div>
         </div>
     </section>
 
 
 
     <!-- About Section -->
-    <section id="about" class="py-16" data-aos="fade-up">
+    <section id="about" class="py-20" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title text-center">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="md:w-1/2 mb-6 md:mb-0" data-aos="fade-right" data-aos-delay="100">
-                    <div class="about-card">
-                        <p class="text-lg mb-6">
-                            I'm a dedicated Computer Science graduate from Shahjalal University of Science and Technology (CGPA: 3.70), with a passion for solving complex problems through code. With over 3500+ problems solved on platforms like Codeforces, CodeChef, and AtCoder, I bring a competitive edge to software development. My projects, such as RxHub and IntelliAssist, showcase my ability to build innovative web and mobile applications using modern technologies like React, Flutter, and MongoDB.
-                        </p>
-                        <div class="mt-6">
-                            <h3 class="text-xl font-semibold text-blue-400">Education</h3>
-                            <p><strong>B.Sc. in Computer Science & Engineering</strong>, Shahjalal University of Science and Technology, Sylhet (2020–2025, CGPA: 3.70)</p>
-                            <p><strong>Higher Secondary Certificate (HSC)</strong>, Notre Dame College, Dhaka (2017–2019, GPA: 5.00)</p>
-                        </div>
-                        <div class="mt-4">
-                            <h3 class="text-xl font-semibold text-blue-400">Technical Skills</h3>
-                            <p><strong>Languages:</strong> C/C++, Python, SQL, Dart, Java, JavaScript</p>
-                            <p><strong>Tools/Technologies:</strong> Git, GitHub, CSS, Bootstrap</p>
-                            <p><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</p>
-                        </div>
+            <div class="section-kicker">A little about me</div>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-layout">
+                <div class="about-copy">
+                    <p class="about-lead">I'm a Software Engineer at Enosis Solutions, building software across the .NET ecosystem and modern web front ends.</p>
+                    <p>At Enosis, I've worked with <strong>C# and .NET</strong> alongside <strong>React and TypeScript</strong> on multiple projects. In my current team, I'm working with <strong>.NET and Blazor Server</strong>. I enjoy turning product requirements into maintainable features, writing clear code, and collaborating with a team to deliver dependable software.</p>
+                    <p>I graduated from Shahjalal University of Science and Technology with a B.Sc. in Computer Science and Engineering (CGPA 3.70). My academic and research background also includes published work in machine learning and EEG-based emotion research.</p>
+                    <div class="about-facts">
+                        <div><span class="fact-label">Current role</span><strong>Software Engineer L2</strong></div>
+                        <div><span class="fact-label">Company</span><strong>Enosis Solutions</strong></div>
+                        <div><span class="fact-label">Education</span><strong>B.Sc. in CSE · SUST</strong></div>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="200">
-                    <div class="relative">
-                        <img src="./images/profile.jpg" alt="Peal Hassan"
-                            class="rounded-full w-72 h-72 object-cover transition-transform duration-300 hover:scale-105 hover:rotate-3">
-                        <div class="absolute inset-0 rounded-full opacity-50 hover:opacity-75 transition-opacity duration-300"
-                            style="transform: rotate(10deg);"></div>
-                    </div>
-                </div>
-
+                <aside class="stack-panel">
+                    <h3>Technologies I've worked with</h3>
+                    <p class="stack-category">Current focus</p>
+                    <div class="tech-tags"><span>.NET</span><span>C#</span><span>Blazor Server</span></div>
+                    <p class="stack-category">Professional experience</p>
+                    <div class="tech-tags"><span>React</span><span>TypeScript</span><span>JavaScript</span></div>
+                    <p class="stack-category">Other experience</p>
+                    <div class="tech-tags"><span>SQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Git</span></div>
+                    <p class="stack-note">Technology tags reflect tools mentioned in my professional and project experience.</p>
+                </aside>
             </div>
         </div>
     </section>
