@@ -385,6 +385,70 @@
             height: 2px;
             background: linear-gradient(90deg, #60a5fa, #f97316, #10b981);
         }
+
+        /* Professional portfolio refresh: consistent rhythm, contrast and responsive cards */
+        :root { --accent: #60a5fa; --accent-strong: #3b82f6; --surface: #182235; --muted: #a8b3c5; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+        body { line-height: 1.7; background: #0b1120; color: #e7edf7; }
+        .light-mode { background: #f7f9fc; color: #1e293b; }
+        .navbar { border-bottom: 1px solid rgba(148,163,184,.18); }
+        .navbar .container { max-width: 1440px; }
+        .section-title { text-transform: none; letter-spacing: -.035em; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+        .section-title::after { content: ''; display: block; width: 64px; height: 4px; border-radius: 9px; margin: 1rem auto 0; }
+        .eyebrow { color: var(--accent); text-transform: uppercase; font-size: .78rem; font-weight: 700; letter-spacing: .16em; margin-bottom: .5rem; }
+        .section-intro { max-width: 720px; margin: 0 auto 2.5rem; text-align: center; color: var(--muted); }
+        .muted, .publication-meta, .publication-note { color: var(--muted); }
+        .light-mode .muted, .light-mode .publication-meta, .light-mode .publication-note, .light-mode .section-intro { color: #64748b; }
+        .section-alt { background: rgba(148,163,184,.055); }
+        .light-mode .section-alt { background: #eef3f9; }
+        .card { background: rgba(24,34,53,.82); border: 1px solid rgba(148,163,184,.2); box-shadow: 0 12px 30px rgba(0,0,0,.12); }
+        .light-mode .card { background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(0,0,0,.2); background: rgba(30,41,59,.96); }
+        .light-mode .card:hover { background: #fff; }
+        .project-card:hover, .platform-card:hover { transform: translateY(-5px); }
+        .publication-card { transform: none; padding: clamp(1.25rem, 3vw, 2rem); border-radius: 1rem; }
+        .publication-card:hover { transform: translateY(-5px); }
+        .publication-content { transform: none; }
+        .publication-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.25rem; align-items: stretch; }
+        .publication-card { display: flex; flex-direction: column; min-width: 0; }
+        .publication-topline { display: flex; justify-content: space-between; align-items: center; gap: .75rem; }
+        .publication-tag { display: inline-flex; align-items: center; border-radius: 999px; padding: .3rem .7rem; background: rgba(96,165,250,.12); color: #93c5fd; font-size: .75rem; font-weight: 700; }
+        .light-mode .publication-tag { color: #1d4ed8; background: #dbeafe; }
+        .publication-symbol { color: var(--accent); font-size: 1.25rem; }
+        .publication-meta { font-size: .88rem; margin-top: .85rem; }
+        .publication-description { margin-top: 1rem; font-size: .95rem; flex-grow: 1; }
+        .publication-venue { font-size: .85rem; color: var(--muted); border-top: 1px solid rgba(148,163,184,.2); padding-top: 1rem; margin-top: 1.25rem; }
+        .publication-link { display: inline-flex; align-items: center; align-self: flex-start; margin-top: 1rem; color: #93c5fd; font-weight: 600; }
+        .publication-link:hover { color: #bfdbfe; text-decoration: underline; }
+        .light-mode .publication-link { color: #1d4ed8; }
+        .publication-note { text-align: center; font-size: .8rem; margin-top: 1.5rem; }
+        .experience-timeline { max-width: 900px; margin: 2.5rem auto 0; display: grid; gap: 1.25rem; }
+        .experience-card { position: relative; padding: clamp(1.25rem, 3vw, 2rem); border-radius: 1rem; }
+        .experience-marker, .education-icon { width: 2.75rem; height: 2.75rem; border-radius: .85rem; display: inline-flex; align-items: center; justify-content: center; color: #93c5fd; background: rgba(96,165,250,.14); }
+        .experience-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; margin-top: 1rem; }
+        .experience-date { flex-shrink: 0; padding: .35rem .7rem; border-radius: 999px; font-size: .78rem; font-weight: 600; color: #bfdbfe; background: rgba(59,130,246,.15); }
+        .light-mode .experience-date { color: #1d4ed8; background: #dbeafe; }
+        .education-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+        .education-card { padding: 1.5rem; border-radius: 1rem; }
+        #home { background-color: #111827; }
+        #home::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,17,32,.92), rgba(11,17,32,.6)); }
+        #home .section-title { color: #fff; text-shadow: none; }
+        #home .section-title::after { background: linear-gradient(90deg,#fff,#60a5fa); }
+        #home .container { max-width: 1000px; }
+        #about { border-top: 1px solid rgba(148,163,184,.12); }
+        .contact-link { border: 1px solid rgba(148,163,184,.2); }
+        a:focus-visible, button:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+        @media (max-width: 1024px) { .publication-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+        @media (max-width: 640px) {
+            .publication-grid, .education-grid { grid-template-columns: 1fr; }
+            .experience-heading { flex-direction: column; gap: .75rem; }
+            .navbar { padding-left: .75rem; padding-right: .75rem; }
+            #home { padding-top: 7rem; padding-bottom: 7rem; }
+            .container { padding-left: 1rem; padding-right: 1rem; }
+            .section-title { margin-bottom: .75rem; }
+            .project-card:hover, .card:hover { transform: translateY(-3px); }
+        }
+
     </style>
 </head>
 <body>
@@ -396,6 +460,10 @@
                 <ul class="hidden md:flex space-x-6">
                     <li><a href="#home" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Home</a></li>
                     <li><a href="#about" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">About</a></li>
+                <li><a href="#experience" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Experience</a></li>
+                <li><a href="#education" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Education</a></li>
+                    <li><a href="#experience" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Experience</a></li>
+                    <li><a href="#education" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Education</a></li>
                     <li><a href="#projects" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Projects</a></li>
                     <li><a href="#competitive" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Competitive Programming</a></li>
                     <li><a href="#contests" class="nav-link text-white hover:text-blue-400 light-mode:text-gray-800 light-mode:hover:text-blue-600">Contests</a></li>
@@ -480,6 +548,68 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16" data-aos="fade-up">
+        <div class="container">
+            <p class="eyebrow text-center">Career journey</p>
+            <h2 class="section-title text-center">Experience</h2>
+            <div class="experience-timeline">
+                <article class="experience-card card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience-marker"><i class="fas fa-briefcase"></i></div>
+                    <div class="experience-heading">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Software Engineer L2</h3>
+                            <p class="text-blue-400 font-semibold mt-1">Enosis Solutions</p>
+                            <p class="muted mt-1">Gulshan, Dhaka, Bangladesh</p>
+                        </div>
+                        <span class="experience-date">August 2026 – Present</span>
+                    </div>
+                    <p class="muted mt-4">Continuing professional growth at Enosis Solutions, following progression from Software Engineer L1.</p>
+                </article>
+                <article class="experience-card card" data-aos="fade-up" data-aos-delay="180">
+                    <div class="experience-marker"><i class="fas fa-code"></i></div>
+                    <div class="experience-heading">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Software Engineer L1</h3>
+                            <p class="text-blue-400 font-semibold mt-1">Enosis Solutions</p>
+                            <p class="muted mt-1">Gulshan, Dhaka, Bangladesh</p>
+                        </div>
+                        <span class="experience-date">August 2025 – July 2026</span>
+                    </div>
+                    <p class="muted mt-4">Started professional software engineering career at Enosis Solutions in August 2025.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 section-alt" data-aos="fade-up">
+        <div class="container">
+            <p class="eyebrow text-center">Academic background</p>
+            <h2 class="section-title text-center">Education</h2>
+            <div class="education-grid">
+                <article class="education-card card">
+                    <span class="education-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <h3 class="text-xl font-semibold mt-4">Bachelor of Engineering, Computer Science and Engineering</h3>
+                    <p class="text-blue-400 font-semibold mt-2">Shahjalal University of Science and Technology</p>
+                    <p class="muted mt-2">February 2020 – July 2025</p>
+                </article>
+                <article class="education-card card">
+                    <span class="education-icon"><i class="fas fa-book-open"></i></span>
+                    <h3 class="text-xl font-semibold mt-4">Higher Secondary Education, Science</h3>
+                    <p class="text-blue-400 font-semibold mt-2">Notre Dame College</p>
+                    <p class="muted mt-2">July 2017 – June 2019</p>
+                </article>
+                <article class="education-card card">
+                    <span class="education-icon"><i class="fas fa-school"></i></span>
+                    <h3 class="text-xl font-semibold mt-4">Secondary School Education, Science</h3>
+                    <p class="text-blue-400 font-semibold mt-2">A.K. High School &amp; College</p>
+                    <p class="muted mt-2">January 2015 – June 2017</p>
+                </article>
             </div>
         </div>
     </section>
@@ -719,16 +849,38 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="py-16 bg-gray-800 light-mode:bg-gray-100" data-aos="fade-up">
+    <section id="publications" class="py-16 section-alt" data-aos="fade-up">
         <div class="container">
+            <p class="eyebrow text-center">Research &amp; publications</p>
             <h2 class="section-title text-center">Publications</h2>
-            <div class="publication-card card">
-                <div class="publication-content">
-                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Simplifying Student Queries: A Dialogflow-Based Conversational Chatbot for University Websites</h3>
-                    <p class="mb-2">Developed and published a research paper on an AI-powered conversational chatbot aimed at enhancing communication within university communities. The project addresses inefficiencies in traditional communication by providing a 24/7 support system for students, faculty, and staff. Built using Google Dialogflow, the chatbot leverages intents, entities, and contexts to understand and respond to queries effectively. Key objectives include improving administrative efficiency, enhancing user experience, and promoting greater engagement with university services. The system is designed to reduce workload on support staff and create a more connected and responsive academic environment.</p>
-                    <p><strong>IEEE Publication:</strong> Published in IEEE Xplore <a href="https://ieeexplore.ieee.org/document/11013327" class="text-blue-400 hover:underline">View Publication</a></p>
-                </div>
+            <p class="section-intro">Research spanning computer vision, conversational AI, and affective computing. Select a paper to view its publisher record.</p>
+            <div class="publication-grid">
+                <article class="publication-card card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="publication-topline"><span class="publication-tag">Computer Vision · 2025</span><i class="fas fa-leaf publication-symbol" aria-hidden="true"></i></div>
+                    <h3 class="text-xl font-semibold mt-4">Vision Transformer-Based Tea Leaf Disease Classification Using a Novel Dataset</h3>
+                    <p class="publication-meta">Tanjumul Alom, Anindro Kumar Roy, MD. Peal Hassan, Md. Shadmim Hasan Sifat</p>
+                    <p class="publication-description">This work explores tea-leaf disease classification with a Vision Transformer and a newly assembled dataset. It focuses on applying transformer-based image recognition to distinguish disease patterns in tea leaves, supporting more data-driven and potentially earlier plant-health assessment.</p>
+                    <p class="publication-venue"><i class="fas fa-book-open mr-2" aria-hidden="true"></i>2025 International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN)</p>
+                    <a class="publication-link" href="https://doi.org/10.1109/QPAIN66474.2025.11171919" target="_blank" rel="noopener noreferrer">Read publication <i class="fas fa-arrow-up-right-from-square ml-1" aria-hidden="true"></i></a>
+                </article>
+                <article class="publication-card card" data-aos="fade-up" data-aos-delay="180">
+                    <div class="publication-topline"><span class="publication-tag">Conversational AI · 2025</span><i class="fas fa-comments publication-symbol" aria-hidden="true"></i></div>
+                    <h3 class="text-xl font-semibold mt-4">Simplifying Student Queries: A Dialogflow-Based Conversational Chatbot for University Websites</h3>
+                    <p class="publication-meta">MD. Peal Hassan, Anindro Kumar Roy, M. Shahidur Rahman</p>
+                    <p class="publication-description">The paper presents a Dialogflow-based conversational chatbot designed to make university website information easier to access. By interpreting student questions and returning relevant answers through a conversational interface, the system aims to simplify common information-seeking tasks and make campus support more accessible.</p>
+                    <p class="publication-venue"><i class="fas fa-book-open mr-2" aria-hidden="true"></i>2025 International Conference on Electrical, Computer and Communication Engineering (ECCE), pp. 1–6</p>
+                    <a class="publication-link" href="https://doi.org/10.1109/ECCE64574.2025.11013327" target="_blank" rel="noopener noreferrer">Read publication <i class="fas fa-arrow-up-right-from-square ml-1" aria-hidden="true"></i></a>
+                </article>
+                <article class="publication-card card" data-aos="fade-up" data-aos-delay="260">
+                    <div class="publication-topline"><span class="publication-tag">Affective Computing · 2026</span><i class="fas fa-brain publication-symbol" aria-hidden="true"></i></div>
+                    <h3 class="text-xl font-semibold mt-4">Developing an EEG Dataset (EmoEG) For The Comparative Analysis of Brain Waves Across Different Emotional States</h3>
+                    <p class="publication-meta">Sadia Sultana, MD. Peal Hassan, Anindro Kumar Roy, Anowar Hossain, Mst Fazilatun Nessa, Nafis Fuad Abir</p>
+                    <p class="publication-description">This study introduces EmoEG, an EEG dataset collected from 40 Bangladeshi university students to support comparative analysis of brain activity across emotional states. Signals were recorded using four scalp electrodes (TP9, AF7, AF8, TP10) and an auxiliary channel, providing a locally collected resource for research into emotion-related neural patterns.</p>
+                    <p class="publication-venue"><i class="fas fa-book-open mr-2" aria-hidden="true"></i>Intelligent Sustainable Systems · Lecture Notes in Networks and Systems, vol. 1727, pp. 65–74 (2026)</p>
+                    <a class="publication-link" href="https://doi.org/10.1007/978-3-032-11515-7_7" target="_blank" rel="noopener noreferrer">Read publication <i class="fas fa-arrow-up-right-from-square ml-1" aria-hidden="true"></i></a>
+                </article>
             </div>
+            <p class="publication-note">Descriptions are concise summaries of the publicly available publication records and abstracts.</p>
         </div>
     </section>
 
@@ -739,8 +891,8 @@
             <div class="flex flex-col items-center">
                 <p class="text-lg mb-4">Let's connect for exciting opportunities and collaborations!</p>
                 <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-                    <a href="mailto:pealhasan6@gmail.com" class="contact-link text-blue-400"><i class="fas fa-envelope mr-2"></i>pealhasan6@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/pealhassan/" class="contact-link text-blue-400"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+                    <a href="mailto:mdpealhassan9@gmail.com" class="contact-link text-blue-400"><i class="fas fa-envelope mr-2"></i>mdpealhassan9@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/md-peal-hassan-068073446/" class="contact-link text-blue-400"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
                     <a href="https://github.com/PealHassan" class="contact-link text-blue-400"><i class="fab fa-github mr-2"></i>GitHub</a>
                 </div>
             </div>
@@ -750,7 +902,7 @@
     <!-- Footer -->
     <footer id="footer" class="py-4 bg-gray-900 light-mode:bg-gray-200 text-white light-mode:text-gray-800 text-center">
         <div class="container">
-            <p>© 2025 MD. Peal Hassan. All rights reserved.</p>
+            <p>© 2026 MD. Peal Hassan. All rights reserved.</p>
         </div>
     </footer>
 
