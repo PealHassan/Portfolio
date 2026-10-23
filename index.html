@@ -503,6 +503,19 @@
         @media(max-width:767px) { .navbar .container { align-items:center; } #home { min-height:520px; padding-top:6rem; padding-bottom:5rem; } .hero-title { font-size:clamp(2.8rem,12vw,4rem); } .about-facts { grid-template-columns:1fr; gap:.8rem; } section:not(#home) { padding-top:4rem; padding-bottom:4rem; } .section-title { margin-bottom:1.5rem; } }
         @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
 
+    
+        /* Profile portrait and expanded technology toolkit */
+        .hero-layout { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr); align-items:center; gap:3rem; }
+        .hero-content { min-width:0; }
+        .hero-portrait-wrap { position:relative; width:min(100%,370px); justify-self:end; }
+        .hero-portrait { display:block; position:relative; z-index:1; width:100%; aspect-ratio:1; object-fit:cover; object-position:center; border-radius:1.5rem; border:1px solid rgba(148,163,184,.32); box-shadow:0 25px 70px rgba(0,0,0,.35); }
+        .portrait-glow { position:absolute; inset:10% -8% -8% 12%; border-radius:1.8rem; background:linear-gradient(135deg,rgba(112,165,255,.42),rgba(112,165,255,.03)); filter:blur(24px); }
+        .portrait-caption { display:inline-flex; position:relative; z-index:2; align-items:center; gap:.55rem; margin-top:1rem; padding:.55rem .85rem; border:1px solid var(--line); border-radius:999px; background:rgba(17,27,46,.94); color:#dbe7f8; font-size:.82rem; }
+        .portrait-status { width:.5rem; height:.5rem; background:#70d6a5; border-radius:50%; }
+        .stack-panel .tech-tags { margin-bottom:.25rem; }
+        @media(max-width:850px) { .hero-layout { grid-template-columns:minmax(0,1fr) 250px; gap:2rem; } .hero-portrait-wrap { width:250px; } }
+        @media(max-width:680px) { .hero-layout { grid-template-columns:1fr; } .hero-portrait-wrap { grid-row:1; width:min(68%,260px); justify-self:start; margin-bottom:.5rem; } .hero-content { grid-row:2; } #home { padding-top:4.5rem; padding-bottom:4rem; } .hero-title { overflow-wrap:anywhere; } }
+
     </style>
 </head>
 <body>
@@ -545,15 +558,22 @@
     <!-- Hero Section -->
     <section id="home" class="py-32 relative overflow-hidden" data-aos="fade-up">
         <div class="hero-grid" aria-hidden="true"></div>
-        <div class="container text-left relative z-10">
-            <p class="hero-eyebrow">SOFTWARE ENGINEER · DHAKA, BANGLADESH</p>
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">MD. Peal Hassan</h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="180">I build reliable web applications with .NET, C#, Blazor, React and TypeScript.</p>
-            <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
-                <a href="#experience" class="primary-action">Explore my experience <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
-                <a href="#projects" class="secondary-action">View projects</a>
+        <div class="container hero-layout relative z-10">
+            <div class="hero-content">
+                <p class="hero-eyebrow">SOFTWARE ENGINEER · DHAKA, BANGLADESH</p>
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">MD. Peal Hassan</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="180">I build reliable web applications with .NET, C#, Blazor, React and TypeScript.</p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+                    <a href="#experience" class="primary-action">Explore my experience <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i></a>
+                    <a href="#projects" class="secondary-action">View projects</a>
+                </div>
+                <div class="hero-stack" aria-label="Core technologies"><span>.NET / C#</span><span>Blazor Server</span><span>React</span><span>TypeScript</span></div>
             </div>
-            <div class="hero-stack" aria-label="Core technologies"><span>.NET / C#</span><span>Blazor Server</span><span>React</span><span>TypeScript</span></div>
+            <div class="hero-portrait-wrap" data-aos="fade-left" data-aos-delay="150">
+                <div class="portrait-glow" aria-hidden="true"></div>
+                <img class="hero-portrait" src="./images/profile.jpg" alt="Portrait of MD. Peal Hassan" width="420" height="420" fetchpriority="high">
+                <span class="portrait-caption"><span class="portrait-status"></span> Software Engineer</span>
+            </div>
         </div>
     </section>
 
@@ -576,14 +596,18 @@
                     </div>
                 </div>
                 <aside class="stack-panel">
-                    <h3>Technologies I've worked with</h3>
-                    <p class="stack-category">Current focus</p>
+                    <h3>Technology toolkit</h3>
+                    <p class="stack-category">Current professional focus</p>
                     <div class="tech-tags"><span>.NET</span><span>C#</span><span>Blazor Server</span></div>
-                    <p class="stack-category">Professional experience</p>
+                    <p class="stack-category">Professional project experience</p>
                     <div class="tech-tags"><span>React</span><span>TypeScript</span><span>JavaScript</span></div>
-                    <p class="stack-category">Other experience</p>
-                    <div class="tech-tags"><span>SQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Git</span></div>
-                    <p class="stack-note">Technology tags reflect tools mentioned in my professional and project experience.</p>
+                    <p class="stack-category">Web & backend projects</p>
+                    <div class="tech-tags"><span>Node.js</span><span>Express</span><span>Spring Boot</span><span>Java</span><span>Java Servlets</span></div>
+                    <p class="stack-category">Mobile & application development</p>
+                    <div class="tech-tags"><span>Flutter</span><span>Dart</span><span>JavaFX</span></div>
+                    <p class="stack-category">Data, cloud & integrations</p>
+                    <div class="tech-tags"><span>MongoDB</span><span>PostgreSQL</span><span>MySQL</span><span>Firebase</span><span>Dialogflow</span><span>SQL</span></div>
+                    <p class="stack-note">Grouped from the technologies described in my portfolio projects and professional experience.</p>
                 </aside>
             </div>
         </div>
